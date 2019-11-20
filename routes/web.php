@@ -18,8 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('company', 'CompanyController');
-
 Route::get('/create', 'CompanyController@create');
-Route::get('/companys', 'CompanyController@index');
-Route::get('/companys', function(){return view('company/index');});
+Route::get('/company', 'CompanyController@index');
+
+Route::get('/companyindex', function () {
+    return view('company/index');
+});

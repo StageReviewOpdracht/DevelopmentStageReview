@@ -8,9 +8,9 @@ use App\Company;
 
 class CompanyController extends Controller
 {
-    function index (){
-        $company = Company::paginate(9);
-        return view('company.index',['name'=>$company]);
+    public static function index (){
+        $company = Company::all();
+        return $company;
     }
     /**
      * Show the form for creating a new resource.
