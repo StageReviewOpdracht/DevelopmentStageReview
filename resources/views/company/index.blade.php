@@ -24,8 +24,9 @@ $data = CompanyController::index();
                                     </tr>
                                     @foreach($data as $company)
                                     <tr>
-                                        <td><a href="#">{{ $company->name }}</a></td>
+                                        <td>{{ $company->name }}</td>
                                         <td>{{ $company->location }}</td>
+                                        <td><a class="btn btn-success" href="{{action('CompanyController@show', ['id' => $company->id])}}">View</a></td>
                                     </tr>
                                     @endforeach
                                 </table>

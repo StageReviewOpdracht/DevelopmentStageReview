@@ -24,3 +24,5 @@ Route::get('/company', 'CompanyController@index');
 Route::get('/companyindex', function () {
     return view('company/index');
 });
+
+Route::resource('companies', 'CompanyController');
